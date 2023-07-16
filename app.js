@@ -6,7 +6,7 @@ const ejs = require('ejs');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static(__dirname+"/public"))
+app.use(express.static(__dirname+"/Public"))
 app.set('view engine','ejs');
 
 
