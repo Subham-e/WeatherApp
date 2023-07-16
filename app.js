@@ -6,7 +6,7 @@ const ejs = require('ejs');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static(__dirname+"/Public"))
+app.use(express.static(__dirname+"/public"))
 app.set('view engine','ejs');
 
 
@@ -25,7 +25,6 @@ app.post("/",(req,res)=>{
     https.get(url,(respond)=>{
         respond.on('data',(data)=>{
           let weatherData = JSON.parse(data);
-          console.log(weatherData);
 
           let temp = weatherData.main.temp;
           let feelsLike = weatherData.main.feels_like;
